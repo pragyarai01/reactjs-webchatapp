@@ -24,7 +24,9 @@ class Input extends Component {
   onSubmit(e) {
     e.preventDefault();
     this.setState({text: ""});
+    if(this.state.text !== ""){
     this.props.onSendMessage(this.state.text);
+    }
   }
 
   onClick(e){
@@ -60,7 +62,7 @@ class Input extends Component {
             placeholder="Enter your message and press ENTER"
             autofocus="true"
           />
-          <button>Send</button>
+          <button onClick={e => this.onSubmit(e)}>Send</button>
         </form>
         
       </div>

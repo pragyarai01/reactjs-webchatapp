@@ -26,7 +26,6 @@ class Dialog extends Component {
     }
 
     renderCard(){
-        console.log("propsssss",this.props)
         // this.setState({ showHide: !this.state.showHide })
         // if(this.props.navigation!== undefined && this.props.navigation.showinfo === true){
         //   return <Cardcomponent navigation = {this.props.location.state} />
@@ -35,13 +34,7 @@ class Dialog extends Component {
         // }
       }
       handleCancel(){
-        console.log("propsssss",this.props)
-        //this.setState({ showHide: !this.state.showHide })
-        // if(this.props.navigation!== undefined && this.props.navigation.showinfo === true){
-        //   return <Cardcomponent navigation = {this.props.location.state} />
           history.push('/')
-        //   return <Cardcomponent navigation = {this.props.navigation} />
-        // }
       }
     // onClick(e){
     //     e.preventDefault();
@@ -56,10 +49,6 @@ class Dialog extends Component {
                 <div className="App-header">
                   <h1>Chat App</h1>
                 </div>
-                {/* <Button id="demo" onClick={() => this.handleModalShowHide()}>
-                <img src={placeholder} alt='some value'  />
-                <text> Mileage</text>   
-                </Button> */}
                 <Modal show={this.state.showHide}>
                     <Modal.Header closeButton onClick={() => this.handleModalShowHide()}>
                     <Modal.Title>
@@ -70,24 +59,11 @@ class Dialog extends Component {
                     <Modal.Body>
                     <label htmlFor="">NAME</label>
                     <input style={{border:0}} type="text" name="name" className="form-control" onChange={e=> this.onChange(e) } readOnly="readOnly" value={this.props.location.state.name}/>
-                    {/* <input id="modal-input" placeholder="Enter your name" type="text" onChange={e => this.onChangeName(e)}/> */}
                     <label htmlFor="">START LOCATION</label>
                     <input style={{border:0}} type="text" name="start" className="form-control" onChange={e=> this.onChange(e) } readOnly="readOnly" value={this.props.location.state.startadd}/>
                     <label htmlFor="">END LOCATION</label>
                     <input style={{border:0}} type="text" name="end" className="form-control" onChange={e=> this.onChange(e) } readOnly="readOnly" value={this.props.location.state.endadd}/>
                     </Modal.Body> 
-                    {/* <Modal.Body>
-                    <div class="main">
-                         <div class="left"><text >MILEAGE</text></div>
-                         <div class="right"><text>{this.props.navigation.mileage} miles</text></div>
-                    </div>
-                    </Modal.Body>
-                    {/* <div style={{backgroundColor:'Green',padding:'15px',alignItems: 'center',justifyContent:'space-between',alignContent:'center'}}>
-                    <text>MILEAGE</text>
-                    <text>{this.props.navigation.mileage} miles</text> */}
-                    {/* <input style={{border:0}} type="text" name="mileage" className="form-control" onChange={e=> this.onChange(e) } readOnly="readOnly" value={this.props.navigation.mileage}/> */}
-                    {/* </div> */}
-                    
                     <Modal.Footer>
                     <Button variant="secondary" onClick={() => this.handleCancel()}>
                         CANCEL
@@ -97,8 +73,6 @@ class Dialog extends Component {
                     </Button>
                     </Modal.Footer>
                 </Modal>
-                
-                {/* {this.state.showmap && this.showMap()} */}
             </div>
         )
     }

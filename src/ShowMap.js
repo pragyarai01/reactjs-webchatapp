@@ -33,7 +33,7 @@ class ShowMap extends Component {
 		  (position) => {
 			let lat = position.coords.latitude
 			let lng = position.coords.longitude
-			console.log("getCurrentPosition Success " + lat + lng) // logs position correctly
+			console.log("getCurrentPosition Success " + lat + lng) 
 			this.setState({
 			  location: {
 				lat: lat,

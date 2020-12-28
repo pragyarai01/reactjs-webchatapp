@@ -1,7 +1,6 @@
 import {Component} from "react";
 import React from "react";
 import { Card,ListGroup } from 'react-bootstrap';
-//import Card from "react-bootstrap/Card";
 import placeholder from './placeholder.png';
 //import history from './history';
 
@@ -9,7 +8,7 @@ class Cardcomponent extends Component {
     constructor(){
         super();
         this.state = {
-            //showHide : true,
+           
         }
     }
     componentDidMount(){
@@ -23,20 +22,10 @@ class Cardcomponent extends Component {
     handleModalShowHide() {
         this.setState({ showHide: !this.state.showHide })
     }
-    // onClick(e){
-    //     e.preventDefault();
-        
-    //     this.setState({showmap: true,showHide:false})
-    //     // console.log("showplus",this.state.showplus)
-    //     // console.log("showform",this.state.showform)
-    //   }
+
     render(){
         return(
             <div style={{float:'right',marginTop:'10px',display:'flex',flexDirection:'row-reverse'}}>
-                {/* <Button id="demo" onClick={() => this.handleModalShowHide()}>
-                <img src={placeholder} alt='some value'  />
-                <text> Mileage</text>   
-                </Button> */}
                 <div className="myavatar" style={{backgroundColor:'orangered'}}></div>
                 <Card style={{ width: '18rem',marginTop:'10px' }}>
                    <Card.Header><img src={placeholder} alt='some value'  />
@@ -62,9 +51,6 @@ class Cardcomponent extends Component {
                     </Button>
                    </Card.Footer> */}
                 </Card>
-                
-                
-                {/* {this.state.showmap && this.showMap()} */}
             </div>
         )
     }
